@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Travel</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg main-nav">
+        <div class="container-fluid d-flex flex-column">
+            <a class="navbar-brand gradient-text mx-auto" href="#">Sunset</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavContent" aria-controls="mainNavContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainNavContent">
+                <ul class="navbar-nav mx-auto">
+                   <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#">Our Clients</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+                   <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="search-bar-container">
+        <div class="container">
+            <form class="main-search-form">
+                <input type="search" class="form-control" placeholder="Search">
+                <button class="btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="overlay">
+            <h1>EXPLORE<br>THE WORLD</h1>
+        </div>
+    </section>
+
+    <section class="search-tabs-section">
+        <div class="container">
+            <div class="search-tabs-nav">
+                <button class="tab-button active">
+                    <i class="fa-solid fa-plane"></i> Flights
+                </button>
+                <button class="tab-button">
+                    <i class="fa-solid fa-hotel"></i> Hotels
+                </button>
+                <button class="tab-button">
+                    <i class="fa-solid fa-car"></i> Cars
+                </button>
+                <button class="tab-button">
+                    <i class="fa-solid fa-ship"></i> Cruises
+                </button>
+            </div>
+
+        <div class="search-panel active" id="flights-panel">
+            <div class="row g-2 align-items-end">
+                <div class="col-md-3">
+                    <label for="flyingFrom" class="form-label">Flying from:</label>
+                    <input type="text" class="form-control" id="flyingFrom" placeholder="City or Airport">
+                </div>
+                <div class="col-md-3">
+                    <label for="flyingTo" class="form-label">To:</label>
+                    <input type="text" class="form-control" id="flyingTo" placeholder="City or Airport">
+                </div>
+                <div class="col-md-2">
+                    <label for="departingDate" class="form-label">Departing:</label>
+                    <input type="text" class="form-control datepicker" id="departingDate" placeholder="Mm/Dd/Yy">
+                </div>
+                <div class="col-md-2">
+                    <label for="returningDate" class="form-label">Returning:</label>
+                    <input type="text" class="form-control datepicker" id="returningDate" placeholder="Mm/Dd/Yy">
+                </div>
+                <div class="col-md-1">
+                    <label for="adults" class="form-label">Adult:</label>
+                    <select class="form-select" id="adults">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>                       
+                    </select>
+                </div>
+                <div class="col-md-1">
+                    <label for="children" class="form-label">Child:</label>
+                    <select class="form-select" id="children">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <div class="col-12 text-end">
+                    <button class="btn btn-search">SEARCH</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-panel" id="hotels-panel" style="display: none;">
+            <div class="row g-2 align-items-end">
+                <div class="col-md-4">
+                    <label for="hotelLocation" class="form-label">Location:</label>
+                    <input type="text" class="form-control" id="hotelLocation" placeholder="City, region, or specific hotel">
+                </div>
+                <div class="col-md-3">
+                    <label for="checkIn" class="form-label">Check-in:</label>
+                    <input type="text" class="form-control datepicker" id="checkIn" placeholder="Mm/Dd/Yy">
+                </div>
+                <div class="col-md-4">
+                    <label for="checkOut" class="form-label">Check-out:</label>
+                    <input type="text" class="form-control datepicker" id="hotelLocation" placeholder="Mm/Dd/Yy">
+                </div>
+                <div class="col-md-1">
+                    <label for="rooms" class="form-label">Rooms:</label>
+                    <select class="form-select" id="rooms">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div class="col-12 text-end">
+                    <button class="btn btn-search">SEARCH HOTELS</button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <section class="topic-background-section py-5">
+        <div class="container text-center text-white">
+
+            <h3 class="reviews-title mb-5">Traveller reviews</h3>
+
+            <div class="image-gallery">
+
+                <div class="polaroid-wrapper">
+                    <div class="polaroid-frame" style="--rotation: -8deg;">
+                        <div class="polaroid-image" style="background-image: url('Fuji.jpg');"></div>
+                        <div class="caption">Mount Fuji - Japan</div>
+                    </div>
+                    <div class="comment-box">
+                        <p>============================================<br>"A breathtaking view from the summit. The climb was worth it!"<br>============================================</p>
+                    </div>
+                </div>
+                
+                <div class="polaroid-wrapper">
+                    <div class="polaroid-frame" style="--rotation: 5deg;">
+                        <div class="polaroid-image" style="background-image: url('e7edfccdff318d72359999614434771d\ \(1\).jpg');"></div>
+                        <div class="caption">Christ the Redeemer - Brazil</div>
+                    </div>
+                    <div class="comment-box">
+                        <p>====================================<br>"Feeling on top of the world. An iconic and spiritual experience."<br>====================================</p>
+                    </div>
+                </div>
+                
+                <div class="polaroid-wrapper">
+                    <div class="polaroid-frame" style="--rotation: -3deg;">
+                        <div class="polaroid-image" style="background-image: url('e112d883bc48537ad7f5b4132753b462\ \(1\).jpg');"></div>
+                        <div class="caption">Taj Mahal - India</div>
+                    </div>
+                    <div class="comment-box">
+                        <p>=========================================<br>"The morning light on the marble was pure magic. A true testament to enduring love."<br>=========================================</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="display-4 mb-4 mt-5">Discover the Wonders of the World</h2>
+            <p class="lead mb-5">
+                Embark on an unforgettable journey with Sunset.
+                From serene beaches to bustling cities, your next adventure awaits.
+            </p>
+            <a href="#" class="btn btn-outline-light btn-lg">Explore Destinations</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container py-4">
+            <p>Find us on Social media</p>
+            <div class="social-icons d-flex justify-content-center">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const searchPanels = document.querySelectorAll('.search-panel');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    searchPanels.forEach(panel => panel.style.display = 'none');
+
+                    this.classList.add('active');
+
+                    const index = Array.from(tabButtons).indexOF(this);
+                    if (searchPanels[index]) {
+                        searchPanels[index].style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            flatpickr('.datepicker', {
+                dateFormat: "m/d/y",
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+/* General Body & Typography */
+body {
+    padding-top: 180px;
+    background-image: url('Beach.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gradient-text {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(90deg, purple, orangered);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.main-nav, .search-bar-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.main-nav {
+    top: 0px;
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.main-nav .navbar-brand {
+    padding: 0;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.main-nav .nav-link {
+    color: #333;
+    font-weight: 600;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.main-nav .nav-link:hover {
+    color: orangered;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+}
+
+/* Navbar */
+.search-bar-container {
+    top: 125px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem 0;
+}
+
+.main-search-form {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.main-search-form .form-control {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #f8f9fa;
+}
+
+.main-search-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-search-form .form-control:focus {
+    background-color: transparent;
+    border-color: #f8f9fa;
+    color: #f8f9fa;
+    box-shadow: none;
+}
+
+.main-search-form .btn {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+    color: #f8f9fa;
+}
+
+.main-search-form .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section */
+.overlay {   
+    padding: 200px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.overlay h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 900;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 10px rgba(255, 94, 0, 0.8), 
+                 4px 4px 15px rgba(255, 153, 0, 0.5);
+}
+
+/* Features Section */
+.search-tabs-section {
+    background-color: transparent;
+    padding-top: 20px;
+    position: relative;
+    z-index: 5;
+    margin-top: -80px;
+}
+
+.search-tabs-section .container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+.search-tabs-nav {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.tab-button {
+    flex-grow: 1;
+    border: none;
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.tab-button:not(:first-child) {
+    border-left: 1px solid #eee;
+}
+
+.tab-button:first-child {
+    border-top-left-radius: 8px;
+}
+
+.tab-button:last-child {
+    border-top-right-radius: 8px;
+}
+
+.tab-button i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.tab-button.active {
+    background-color: orangered;
+    color: #f8f9fa;
+    border-bottom: 2px solid #333;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.search-panel {
+    padding: 25px;
+}
+
+.search-panel .form-label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.search-panel .form-control,
+.search-panel .form-select {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    color: #333;
+    box-shadow: none;
+}
+
+.search-panel .form-control::placeholder {
+    color: #aaa;
+}
+
+.search-panel .form-control:focus,
+.search-panel.form-select:focus {
+    border-color: orangered;
+}
+
+.btn-search {
+    background-color: orangered;
+    color: #f8f9fa;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: #ff3300;
+    color: #f8f9fa;
+}
+
+/* Specific styling for the last column (search button) to push it to the right */
+.search-panel .col-12.text-end {
+    margin-top: 15px;
+}
+
+@media (max-width: 767.98px) {
+    .search-tabs-section .container {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .tab-button {
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+    .tab-button i {
+        margin-right: 5px;
+        font-size: 1rem;
+    }
+    .search-panel {
+        padding: 15px;
+    }
+    .search-panel .col-md-3,
+    .search-panel .col-md-2,
+    .search-panel .col-md-2 {
+        margin-bottom: 15px;
+    }
+    .search-panel .col-12.text-end {
+        text-align: center !important;
+    }
+}
+
+.feature-box h5 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.feature-box p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Topic Section with Polaroids */
+.topic-background-section {
+    background-image: url('Sunset.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 500px;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.reviews-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: #f8f9fa;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6),
+                 4px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.topic-background-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.topic-background-section .btn-outline-light:hover {
+    background-color: #f8f9fa;
+    color: orangered;
+}
+
+/* Polaroid Gallery Styles */
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.polaroid-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: -50px;
+    width: 60%;
+}
+
+.polaroid-wrapper:nth-child(even) {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+.polaroid-wrapper:nth-child(even) .comment-box {
+    margin-left: 0;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.polaroid-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+/* The single, correct rule for the polaroid frame */
+.polaroid-frame {
+    background-color: #f8f9fa;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 300px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: rotate(var(--rotation, -5deg));
+    position: relative;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.polaroid-frame:hover {
+    transform: scale(1.1) rotate(0deg);
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.4);
+    z-index: 10;
+}
+
+.polaroid-image {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 210px;
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: #333;
+}
+
+.comment-box {
+    margin-left: 20px;
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #f8f9fa;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+footer p {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: orangered;
+}
